@@ -1,0 +1,18 @@
+﻿<h2>Все номера</h2>
+<h3>@Model.currentCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach(var room in Model.allRooms)
+        {
+            <div class="col-lg-4">
+                <img class="img-thumbnail" src="@room.img" alt="@room.name" />
+                <h2>Комната: @room.name</h2>
+                <p>@room.shortDescription</p>
+                <p>@room.longDescription</p>
+                <p>Цена: @room.price.ToString("c")</p>
+                <p class="btn btn-warning" href = "#">Забронировать</p>
+            </div>
+        }
+
+    }
+</div>
