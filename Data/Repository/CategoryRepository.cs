@@ -8,20 +8,8 @@ using szhanakorgan.Data.Models;
 
 namespace szhanakorgan.Data.Repository
 {
-    public class CategoryRepository : IAllRooms 
+    public class CategoryRepository
     {
 
-        private readonly AppDBContent appDBContent;
-
-        public RoomRepository(AppDBContent appDBContent) {
-            this.appDBContent = appDBContent;
-        }
-
-        public IEnumerable<Rooms> rooms => appDBContent.Room.Include(c => c.Category);
-
-        public IEnumerable<Rooms> getFavRooms => appDBContent.Room.Where(p => p.isFavourite).Include(c => c.Category);
-
-        public Rooms getObjectRooms(int roomID) => AppDBContent.Room.FirstOrDefault(p => p.id == roomID);
-       
     }
 }

@@ -8,7 +8,7 @@ namespace szhanakorgan.Data.mocks
     public class MockRooms : IAllRooms
     {
         private readonly IRoomsCategory _categoryRooms = new MockCategory();
-        public IEnumerable<Rooms> rooms
+        public IEnumerable<Rooms> Rooms
         {
             get
             {

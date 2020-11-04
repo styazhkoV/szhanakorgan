@@ -26,7 +26,7 @@ namespace szhanakorgan.Controllers
             //var rooms = _allRooms.rooms;//передаваемые данные в HTML страничку
             RoomListVievModel obj = new RoomListVievModel();
             ViewBag.Title = "Жанкорган";
-            obj.allRooms = _allRooms.rooms;
+            obj.allRooms = _allRooms.Rooms;
             obj.currentCategory = "Комнаты";
             return View(obj);//Подключаемая HTML страница 
         }
